@@ -21,6 +21,6 @@ var game;
 
 function init() {
     game = new Game(44, 33);
-    game.players.push(new Player('Julius', [5, 6], 35));
+    game.players.push(new Player('Julius', [5, 6], 35234));
     game.render();
 }

@@ -1,0 +1,45 @@
+@font-face {
+                font-family: unifont;
+                src: url(/Assets/unifont-8.0.01.ttf);
+            }
+            body {
+                background-color: black;
+                color: white;
+                font-family: unifont;
+            }
+            div {
+                animation: blink 0.5s step-start 0s;
+                margin: 0;
+                padding: 0;
+                border: none;
+                z-index: 0;
+            }
+            #console {
+                width: 792px;
+                position: relative;
+                bottom: 0;
+            }
+            #consoleMask {
+                width: 792px;
+                height: 792px;
+            }
+            @keyframes blink {
+                50% {
+                    opacity: 0.0;
+                }
+            }
+            
+            .player {
+                animation: blink 1s step-start 0s infinite;
+                width: 18px;
+                height: 18px;
+                position: absolute;
+                color: red;
+                z-index: 1;
+                top: 0;
+            }
+            .tile {
+                width: 18px; 
+                height: 18px; 
+                float: left;
+            }

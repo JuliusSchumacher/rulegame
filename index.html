@@ -16,6 +16,7 @@
                 font-family: unifont;
             }
             div {
+                animation: blink 0.5s step-start 0s;
                 margin: 0;
                 padding: 0;
                 border: none;
@@ -46,6 +47,11 @@
                 top: 0;
                 font-size: 18px;
             }
+            .tile {
+                width: 18px; 
+                height: 18px; 
+                float: left;
+            }
         </style>
 
 
@@ -54,7 +60,7 @@
         <script src="Code/renderer.js"></script>
         <script src="Code/player.js"></script>
     </head>
-    <body>
+    <body onload="init()">
         <div id="consoleMask">
             <div id="console"></div>
         </div>

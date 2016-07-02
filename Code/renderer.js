@@ -29,7 +29,7 @@ function Renderer() {
 
     this.renderPlayers = function() {
         for (var i = 0; i < this.players.length; i++) {
-            $('#console').append('<div class="player" style=" left:' + (18 * this.players[i].position[0]) + 'px; top:' + (18 * this.players[i].position[1]) + 'px;">' + this.players[i].icon + '</div>')
+            $('#console').append('<div class="player" style=" left:' + (18 * this.players[i].position[0]) + 'px; top:' + (18 * this.players[i].position[1]) + 'px; color: #' + this.players[i].color + '">' + this.players[i].icon + '</div>')
         }
         $('.playerName').text('>> ' + this.players[0].name);
     }

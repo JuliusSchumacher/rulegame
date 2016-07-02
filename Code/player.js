@@ -2,6 +2,7 @@ var Player = function(name, pos, icon) {
     this.name = name;
     this.position = pos;
     this.icon = String.fromCharCode(icon);
+    this.color = 'ff0000';
     
     this.move = function(direction) {
         switch(direction) {

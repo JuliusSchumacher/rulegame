@@ -21,7 +21,7 @@ function Game(size, charOffset) {
     this.start = function() {
         this.renderer.renderLine('<< Game', 'Rulegame [Alpha]');
         this.renderer.renderLine('<< Game', '(c) 2016 Julius Schumacher. All rights reserved.');
-        this.renderer.renderLine('<< Game', 'Type HELP for a help playing this game.');
+        this.renderer.renderLine('<< Game', 'Type HELP for help playing this game.');
     }
 }
 

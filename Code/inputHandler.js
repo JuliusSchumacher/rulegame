@@ -12,9 +12,13 @@ var InputHandler = function(game) {
             return;
         }
         
-        this.game.renderer.renderLine(this.game.players[0].name, this.playerInput);
+        this.game.renderer.renderLine('>> ' + this.game.players[0].name, this.playerInput);
+        
+        this.playerInput = this.playerInput.toUpperCase();
         
         this.playerInput = this.playerInput.split(' ');
+        
+        this.game.commandHandler.handleCommand(this.playerInput);
     }
     
 }

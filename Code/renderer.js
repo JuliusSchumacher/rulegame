@@ -2,8 +2,12 @@ function Renderer() {
     this.map;
     this.players;
     
-    this.clearAll = function() {
+    this.clearConsole = function() {
         $('#console').empty();
+    }
+    
+    this.clearPlayerConsole = function() {
+        $('#playerInputConsole').empty();
     }
     
     this.renderMap = function(offset) {
@@ -31,7 +35,7 @@ function Renderer() {
     }
     
     this.renderLine = function(name, line) {
-        $('#playerInputConsole').append('<div class="line"><div class="name"> >> ' + name + '</div><div class="content">' + line + '</div></div>');
+        $('#playerInputConsole').append('<div class="line"><div class="name">' + name + '</div><div class="content">' + line + '</div></div>');
         $('.playerInput').val('');
         $('.line').each(function(i) {
             $(this).css('top', (i * 20) + 'px');

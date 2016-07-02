@@ -34,7 +34,8 @@ function Renderer() {
         $('#playerInputConsole').append('<div class="line"><div class="name"> >> ' + name + '</div><div class="content">' + line + '</div></div>');
         $('.playerInput').val('');
         $('.line').each(function(i) {
-            $(this).css('bottom', (i * 20) + 'px');
+            $(this).css('top', (i * 20) + 'px');
         })
+        $("#playerInputConsole").scrollTop($("#playerInputConsole")[0].scrollHeight);
     }
 }

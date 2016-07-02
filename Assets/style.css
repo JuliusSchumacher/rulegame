@@ -2,11 +2,18 @@
     font-family: unifont;
     src: url(/Assets/unifont-8.0.01.ttf);
 }
+
 body {
     background-color: black;
     color: white;
     font-family: unifont;
 }
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
 div {
     animation: blink 0.5s step-start 0s;
     margin: 0;
@@ -14,17 +21,20 @@ div {
     border: none;
     z-index: 0;
 }
+
 #console {
     width: 792px;
     position: absolute;
     bottom: 0;
 }
+
 #consoleMask {
     width: 792px;
     height: 792px;
     border: 2px solid #fff;
     position: relative;
 }
+
 @keyframes blink {
     50% {
         opacity: 0.0;
@@ -40,42 +50,57 @@ div {
     z-index: 1;
     top: 0;
 }
+
 .tile {
     width: 18px; 
     height: 18px; 
     float: left;
 }
 
-#playerInputConsole {
-    height: 150px;
+#playerInputConsoleMask {
+    height: 140px;
     width: 792px;
     border: 2px solid #fff;
     border-top: none;
     position: relative;
     top: 0;
-    overflow: hidden;
+}
+
+#playerInputConsole {
+    min-height: 150px;
+    height: auto;
+    width: 790px;
+    position: absolute;
+    bottom: 0;
+    overflow-x: hidden;
+    overflow-y: scroll
 }
 
 .playerInput {
-    width: 633px;
-    border: 1px solid #fff;
+    width: 631px;
+    height: 20px;
+    border: 2px solid #fff;
     border-top: none;
     border-left: none;
     background-color: #000;
     color: #fff;
     font-family: unifont;
+    font-size: 18px;
     position: relative;
-    left: 0;
+    left: 1px;
     display: inline-block;
-    margin: 0;
+    float: left;
 }
+
 .playerName {
     width: 158px;
+    height: 22px;
     position: relative;
     top: 0;
-    border: 1px solid #fff;
+    border: 2px solid #fff;
+    border-top: none;
     display: inline-block;
-    margin: 0;
+    float: left;
 }
 
 .playerInput:focus {
@@ -88,6 +113,7 @@ div {
     bottom: 20px;
     width: 100%;
 }
+
 .name {
     display: inline;
     left: 0;
@@ -99,4 +125,8 @@ div {
     position: absolute;
     right: 0;
     width: 80%;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
 }
